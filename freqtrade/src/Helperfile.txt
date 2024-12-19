@@ -1,0 +1,30 @@
+download some data:
+freqtrade download-data --pairs "DOGE/USDT" "BTC/USDT"   -t "15m" "30m" "1h" "2h" --prepend --timerange 20100101-
+
+freqtrade download-data -c user_data/config_ALL.json --timerange 20100101-
+
+shows what is downloaded:
+freqtrade list-data --userdir user_data/
+
+
+user_data/config.json
+
+freqtrade download-data --help
+
+STRATEGIES:
+freqtrade list-strategies
+
+BACKTESTINH :
+".*/USDT"
+
+freqtrade backtesting  --pairs "DOGE/USDT"  --fee 0.1  --stake-amount 10 --timeframe "15m"
+
+freqtrade backtesting --pairs "DOGE/USDT" --timeframe "15m"  --strategy WaveTrendMACDStrategy --timerange=20230101- --export=signals --export-filename=/tmp/mystrat_backtest.json
+
+
+
+freqtrade backtesting -c <config.json> --timeframe <tf> --strategy <strategy_name> --timerange=<timerange> --export=signals --export-filename=/tmp/mystrat_backtest.json
+--export=signals
+
+
+freqtrade webserver
